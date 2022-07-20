@@ -24,7 +24,9 @@ jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
-     working-directory: webapp
+    defaults:
+      run:
+          working-directory: webapp
     permissions:
       actions: read
       contents: read
