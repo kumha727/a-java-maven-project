@@ -27,7 +27,7 @@ jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
-    working-directory: ./server
+    
     permissions:
       actions: read
       contents: read
