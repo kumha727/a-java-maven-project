@@ -17,6 +17,8 @@ on:
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ "main" ]
+  paths-ignore:
+      - 'webapp/**'
   schedule:
     - cron: '22 4 * * 0'
 
@@ -24,9 +26,7 @@ jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
-    defaults:
-      run:
-          working-directory: ./webapp
+   
     permissions:
       actions: read
       contents: read
