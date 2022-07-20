@@ -13,12 +13,13 @@ name: "CodeQL2"
 
 on:
   push:
-    branches: [ "main" ]
+   paths-ignore:
+      - 'webapp/**'
+   branches: [ "main" ]
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ "main" ]
-  paths-ignore:
-      - 'webapp/**'
+
   schedule:
     - cron: '22 4 * * 0'
 
